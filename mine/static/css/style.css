@@ -3,7 +3,7 @@ body {
 	color: white;
 	font-style: normal;
 	font-family: "Times New Roman";
-	font-size:15px;
+	/*font-size:15px;*/
     /*font-family : monospace ;*/
     font-size : 100% ;
     /* background-color : white ;
@@ -22,12 +22,12 @@ a:link    { color : blue ; text-decoration : none ;      }
 a:hover   { color : blue ; text-decoration : underline ; }
 a:visited { color : blue ;                               }
 
-h1 a { color : inherit !important }
-h2 a { color : inherit !important }
-h3 a { color : inherit !important }
-h4 a { color : inherit !important }
-h5 a { color : inherit !important }
-h6 a { color : inherit !important }
+h1 a { color : #222222; }
+h2 a { color : #222222; }
+h3 a { color : #222222; }
+h4 a { color : #222222; }
+h5 a { color : #222222; }
+h6 a { color : #222222; }
 
 pre {
     margin : 2em 1em 2em 4em ;
@@ -93,8 +93,8 @@ tt {color:#55ECA9}
 
 
 /* Link Style */
-a:link		{ color:white; text-shadow: grey 0.0px 0.0px 2px  }
-a:visited	{ color:white }
+a:link		{ color:cyan; text-shadow: grey 0.0px 0.0px 2px  }
+a:visited	{ color:cyan; text-shadow: #222299 0.0px 0.0px 2px  }
 /* a:visited	{ color:blue }*/
 a:active	{ color:cyan; text-shadow: none }
 a:hover		{ color:cyan }
