@@ -33,8 +33,10 @@
 </head>
 
 <body id="index" class="home">
-        <header id="banner" class="body" style='background-image: url("{{ SITEURL }}/theme/images/GC_4096sq_bolo.png") background-position:left; min-heigt: 172px; _height: 172px; background-repeat: no-repeat;'>
-                <h1><a href="{{ SITEURL }}">{{ SITENAME }} <strong>{{ SITESUBTITLE }}</strong></a></h1>
+        <header id="banner" class="body" >
+            <div id="header" style='background-image: url("{{ SITEURL }}/theme/images/GC_4096sq_bolo.png"); background-position:left; min-heigt: 200px;  background-repeat: no-repeat; max-width: 80%;'>
+                <h1 style="color: #C4C4C4;"><a class="header" href="{{ SITEURL }}">{{ SITENAME }} <strong>{{ SITESUBTITLE }}</strong></a></h1>
+            </div>
         </header><!-- /#banner -->
         <nav id="menu"><ul>
         {% for title, link in MENUITEMS %}
