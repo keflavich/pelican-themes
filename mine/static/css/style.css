@@ -93,8 +93,8 @@ tt {color:#55ECA9}
 
 
 /* Link Style */
-a:link		{ color:cyan; text-shadow: grey 0.0px 0.0px 2px  }
-a:visited	{ color:cyan; text-shadow: #222299 0.0px 0.0px 2px  }
+a:link		{ color:cyan;  }
+a:visited	{ color:cyan;  }
 /* a:visited	{ color:blue }*/
 a:active	{ color:cyan; text-shadow: none }
 a:hover		{ color:cyan }
@@ -103,7 +103,7 @@ a {text-decoration: none; }
 /* http://stackoverflow.com/questions/8290447/remove-horizontal-spacing-when-using-positionrelative-in-navigation-bar */
 /* a.navbar { position:relative; left:-20px; right: 20px;} */
 a.navbar:link	 { color:#AAAAFF; text-shadow:none; padding: 5px 0px; white-space:nowrap; font-size:15px;}
-a.navbar:visited { color:#AAAAFF; text-shadow: #4444FF 0.0px 0.0px 2px}
+a.navbar:visited { color:#AAAAFF; }
 a.navbar:hover	 { color:#CCCCCC; background:#444488;  } /* font-weight: bold;} */
 a.navbar:active	 { color:grey; } /* font-weight: bold;} */
 a.navbar {padding:none; font-size:15px;}
@@ -112,7 +112,7 @@ a.navbar:after {content:']'; display:inline; font-size:25pt; color:white; positi
 
 nav a:link    { color:#AAAAFF; text-decoration:none; 
              padding: 5px 0; white-space:nowrap; font-size:15px;}
-nav a:visited { color:#AAAAFF; text-shadow: #4444FF 0.0px 0.0px 2px}
+nav a:visited { color:#AAAAFF; }
 nav a:hover   { color:#CCCCCC; background:#444488;  } 
 nav a:active  { color:grey; }
 nav li {padding:2px; font-size:15px; display:inline;}
