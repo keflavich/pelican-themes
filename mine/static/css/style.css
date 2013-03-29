@@ -84,11 +84,6 @@ div {
 	font-size:15px;
 }
 
-h2 {
-		font-size:25px;
-		text-align:center;
-}
-
 /* tt { color:yellow } */
 tt {color:#55ECA9}
 
@@ -471,13 +466,13 @@ border-right: 1px solid #404040;
 border-left: 1px solid #404040;
 }
 /* Headings
------------------------------------------------ */
+----------------------------------------------- 
 h2 {
 margin: 0 0 1em 0;
 font: normal bold 11px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
 color: #ffffff;
 text-transform: uppercase;
-}
+}*/
 /* Widgets
 ----------------------------------------------- */
 .widget .zippy {
