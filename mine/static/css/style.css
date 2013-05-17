@@ -1154,10 +1154,6 @@ font-family: monospace;
 }
 .shortcut_descr {
 }
-/* Word-wrap output correctly.  This is the CSS3 spelling, though Firefox seems
-to not honor it correctly.  Webkit browsers (Chrome, rekonq, Safari) do.
-*/
-pre, code, kbd, samp { white-space: pre-wrap; }
 #fonttest {
 font-family: monospace;
 }
@@ -1284,7 +1280,12 @@ div.entry-content {
     color: inherit !important;
 }
 
-div.literal-block {
+pre.literal-block {
     overflow: scroll;
-    white-space:nowrap;
+    white-space: pre;
 }
+
+/* Word-wrap output correctly.  This is the CSS3 spelling, though Firefox seems
+to not honor it correctly.  Webkit browsers (Chrome, rekonq, Safari) do.
+*/
+pre, code, kbd, samp { white-space: pre-wrap; }
