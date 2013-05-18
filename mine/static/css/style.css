@@ -14,14 +14,39 @@ body {
     margin-right: auto;
     margin-top: 2%;
     margin-bottom: 2%;
-    max-width : 120ex;
-    min-width : 80ex ;
-    min-height : 200px ;
     padding : 1em ;
     /*margin : 5% 10% ;*/
+}
+
+div#content {
     border : thin solid gray ;
     border-radius : 5px ;
     display : block ;
+    max-width : 85%;
+    width: 850px;
+    min-width : 800px ;
+    min-height : 200px ;
+    vertical-align: middle;
+    /* for centering: */
+    margin-left: auto;
+    margin-right: auto;
+    /*text-align: center;*/
+}
+
+div#header {
+    max-width : 850px;
+    min-width : 80ex ;
+    /* for centering: */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header#banner {
+    max-width : 850px;
+    min-width : 80ex ;
+    /* for centering: */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 a:link    { color : blue ; text-decoration : none ;      }
@@ -105,21 +130,21 @@ a {text-decoration: none; }
 /* a.navbar { position:relative; left:-20px; right: 20px;} */
 a.navbar:link	 { color:#AAAAFF; text-shadow:none; padding: 5px 0px; white-space:nowrap; font-size:15px;}
 a.navbar:visited { color:#AAAAFF; }
-a.navbar:hover	 { color:#CCCCCC; background:#444488;  } /* font-weight: bold;} */
+a.navbar:hover	 { color:#CCCCCC; background: rgba(68,68,136,0.5);  } /* #444488 font-weight: bold;} */
 a.navbar:active	 { color:grey; } /* font-weight: bold;} */
 a.navbar {padding:none; font-size:15px;}
 a.navbar:before {content:'['; display:inline; font-size:25pt; color:white; position:relative; left:-3px; top:3.5px}
 a.navbar:after {content:']'; display:inline; font-size:25pt; color:white; position:relative; right:-3px; top:3.5px}
 
 nav a:link    { color:#AAAAFF; text-decoration:none; 
-            background-color: #292929;
+            background-color: rgba(21,21,21,0.5); /*#292929;*/
              padding: 5px 0; white-space:nowrap; font-size:15px;}
 nav a:visited { color:#AAAAFF; 
-            background-color: #292929;
+            background-color: rgba(21,21,21,0.5);
         }
-nav a:hover   { color:#CCCCCC; background:#444488;  } 
+nav a:hover   { color:#CCCCCC; background: rgba(68,68,136,0.5);  } 
 nav a:active  { color:grey; 
-            background-color: #292929;
+            background-color: rgba(21,21,21,0.5);
     }
 nav li {padding:2px; font-size:15px; display:inline;}
 
@@ -1139,10 +1164,6 @@ font-family: monospace;
 }
 .shortcut_descr {
 }
-/* Word-wrap output correctly.  This is the CSS3 spelling, though Firefox seems
-to not honor it correctly.  Webkit browsers (Chrome, rekonq, Safari) do.
-*/
-pre, code, kbd, samp { white-space: pre-wrap; }
 #fonttest {
 font-family: monospace;
 }
@@ -1263,3 +1284,19 @@ width: auto;
 div.entry-content {
     max-width: 80%;
 }
+
+/* have to override mathjax defaults */
+.MathJax .mo, .MathJax .mi {
+    color: inherit !important;
+}
+
+pre.literal-block {
+    /*min-width:800px;
+    overflow-x: scroll;*/
+    white-space: pre;
+}
+
+/* Word-wrap output correctly.  This is the CSS3 spelling, though Firefox seems
+to not honor it correctly.  Webkit browsers (Chrome, rekonq, Safari) do.
+*/
+pre, code, kbd, samp { white-space: pre-wrap; }

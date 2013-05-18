@@ -30,9 +30,39 @@
         <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
         {% endif %}
         {% endblock head %}
+<!-- Using MathJax, with the delimiters $ -->
+<!-- Conflict with pygments for the .mo and .mi -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+    styles: {
+    ".MathJax .mo, .MathJax .mi": {color: "inherit !important"}}
+    },
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],processEscapes: true}
+    });
+    MathJax.Hub.Register.StartupHook("HTML-CSS Jax Ready",function () {
+    var VARIANT = MathJax.OutputJax["HTML-CSS"].FONTDATA.VARIANT;
+    VARIANT["normal"].fonts.unshift("MathJax_SansSerif");
+    VARIANT["bold"].fonts.unshift("MathJax_SansSerif-bold");
+    VARIANT["italic"].fonts.unshift("MathJax_SansSerif-italic");
+    VARIANT["-tex-mathit"].fonts.unshift("MathJax_SansSerif-italic");
+    });
+    MathJax.Hub.Register.StartupHook("SVG Jax Ready",function () {
+    var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;
+    VARIANT["normal"].fonts.unshift("MathJax_SansSerif");
+    VARIANT["bold"].fonts.unshift("MathJax_SansSerif-bold");
+    VARIANT["italic"].fonts.unshift("MathJax_SansSerif-italic");
+    VARIANT["-tex-mathit"].fonts.unshift("MathJax_SansSerif-italic");
+    });
+</script>
+
+<script type="text/javascript"
+src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+        
 </head>
 
-<body id="index" class="home">
+<body id="base" class="home">
 
 
     <header id="banner" class="body" >
@@ -58,6 +88,7 @@
         </div>
     </header><!-- /#banner -->
 
+ {% if SHOW_SIDEBAR %}
   <div id="sidebar">
     <ul>
   	{% if DISPLAY_PAGES_ON_MENU %}
@@ -131,9 +162,12 @@
     
     </ul>
   </div><!-- end #sidebar -->
+ {% endif %}
 
+  <div id="content">
         {% block content %}
         {% endblock %}
+  </div>
         <footer id="contentinfo" class="body">
         </footer><!-- /#contentinfo -->
 
