@@ -249,7 +249,7 @@ a.norm:active	{ color:#FF3300; }
 	/*text-align: right;*/
 	min-width: 10%; 
 	max-width: 20%; 
-    border-left:solid #AAAAAA;
+    border:solid #AAAAAA;
 }
 
 ul.recent_header {
