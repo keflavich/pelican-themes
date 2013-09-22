@@ -69,7 +69,7 @@ h5 { font-size: 150%; }
 h6 { font-size: 125%; }
 
 pre {
-    margin : 2em 1em 2em 4em ;
+    margin : 0px; /*2em 1em 2em 4em ;*/
 }
 
 #menu li {
@@ -1294,7 +1294,7 @@ div.entry-content {
 
 div.highlight {
     background-color: #222;
-    border-width: 2px;
+    border-width: 1px;
     border-color: #ccc;
     border-style: solid;
 }
@@ -1322,4 +1322,3 @@ span#math {
 .MathJax_Display {
 text-align: left !important;
 }
-
