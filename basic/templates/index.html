@@ -1,8 +1,18 @@
 {% extends "base.html" %}
+
 {% block content %}
 <section id="content">
-{% block content_title %}
-{% endblock %}
+
+{% block tags %}
+<ul>
+  {% for tags, articles in tags %}
+      <a href="{{ SITEURL }}/{{ tags.url }}">{{ tags }}</a>
+      {% endfor %}
+</ul>
+{% endblock tags %}
+
+<!--{% block content_title %}-->
+<!--{% endblock %}-->
 
 <ul id="post-list">
 {% for article in articles_page.object_list %}
